@@ -12,6 +12,10 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 
+app.get("/", function (req, res) {
+  res.send("Welcome !");
+});
+
 app.use("/", require("./routes/movie"));
 
 //DB Connect
